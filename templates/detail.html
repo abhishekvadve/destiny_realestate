@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Detailed View</h1>
+<h1>{{ listing.Title }}</h1>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>
+
+
+<a href="{% url 'listing:contact' %}">Contact Us</a>
+{% endblock  %}
